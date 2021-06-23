@@ -10,6 +10,8 @@
 		B64BCA8F2683C262005EE20E /* BBH_GENETIC_ML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64BCA852683C261005EE20E /* BBH_GENETIC_ML.framework */; };
 		B64BCA942683C262005EE20E /* BBH_GENETIC_MLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64BCA932683C262005EE20E /* BBH_GENETIC_MLTests.swift */; };
 		B64BCA962683C262005EE20E /* BBH_GENETIC_ML.h in Headers */ = {isa = PBXBuildFile; fileRef = B64BCA882683C261005EE20E /* BBH_GENETIC_ML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B64BCAEE2683C56E005EE20E /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64BCADE2683C56E005EE20E /* Poll.swift */; };
+		B64BCAEF2683C56E005EE20E /* ML_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B64BCADF2683C56E005EE20E /* ML_0.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B64BCA8E2683C262005EE20E /* BBH_GENETIC_MLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBH_GENETIC_MLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64BCA932683C262005EE20E /* BBH_GENETIC_MLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBH_GENETIC_MLTests.swift; sourceTree = "<group>"; };
 		B64BCA952683C262005EE20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64BCADE2683C56E005EE20E /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		B64BCAE02683C56E005EE20E /* ML_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ML_0.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		B64BCA872683C261005EE20E /* BBH_GENETIC_ML */ = {
 			isa = PBXGroup;
 			children = (
+				B64BCADC2683C56E005EE20E /* BBH_ML */,
 				B64BCA882683C261005EE20E /* BBH_GENETIC_ML.h */,
 				B64BCA892683C261005EE20E /* Info.plist */,
 			);
@@ -84,6 +89,15 @@
 				B64BCA952683C262005EE20E /* Info.plist */,
 			);
 			path = BBH_GENETIC_MLTests;
+			sourceTree = "<group>";
+		};
+		B64BCADC2683C56E005EE20E /* BBH_ML */ = {
+			isa = PBXGroup;
+			children = (
+				B64BCADE2683C56E005EE20E /* Poll.swift */,
+				B64BCADF2683C56E005EE20E /* ML_0.xcdatamodeld */,
+			);
+			path = BBH_ML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				TargetAttributes = {
 					B64BCA842683C261005EE20E = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					B64BCA8D2683C262005EE20E = {
 						CreatedOnToolsVersion = 12.3;
@@ -194,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64BCAEF2683C56E005EE20E /* ML_0.xcdatamodeld in Sources */,
+				B64BCAEE2683C56E005EE20E /* Poll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,8 @@
 		B64BCA9A2683C262005EE20E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D6DN86P8S8;
@@ -357,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "barak.ben-hur.BBH-GENETIC-ML";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +385,8 @@
 		B64BCA9B2683C262005EE20E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D6DN86P8S8;
@@ -389,6 +411,7 @@
 		B64BCA9D2683C262005EE20E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6DN86P8S8;
 				INFOPLIST_FILE = BBH_GENETIC_MLTests/Info.plist;
@@ -407,6 +430,7 @@
 		B64BCA9E2683C262005EE20E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6DN86P8S8;
 				INFOPLIST_FILE = BBH_GENETIC_MLTests/Info.plist;
@@ -453,6 +477,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B64BCADF2683C56E005EE20E /* ML_0.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B64BCAE02683C56E005EE20E /* ML_0.xcdatamodel */,
+			);
+			currentVersion = B64BCAE02683C56E005EE20E /* ML_0.xcdatamodel */;
+			path = ML_0.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B64BCA7C2683C261005EE20E /* Project object */;
 }
